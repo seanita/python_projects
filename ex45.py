@@ -1,8 +1,7 @@
 from sys import exit
 from random import randint
 
-#creates an Engine class that has a __init__function that initializes object scene and play() function/method
-#that control how scenes work and uses functions in Map class to call a particular scene 
+# Creates an Engine class that has functions that control how scenes work and contains functions from the Map class that calls scenes
 
 
 class Engine(object):
@@ -35,21 +34,21 @@ class Bar(object):
 				1.	fight back
 				2.	radio for help
 				3.	tell a Liroan joke 
-			''')
+		''')
 		action = input("> ")
 
 		if action == '1' or action == 'fight!':
 			print('''
 				Ruh-roh! The Liroans clearly outnumber your crew and are a much, much bigger.")
 				The get up and surround your crew and then...
-				''')
+			''')
 			return'death'
 
 		elif action == '2' or action == 'radio for help':
 			print('''
 				Good choice! Luckily, the ship quickly picks up your distress signal.
 				locks onto your vitals and beams you out of the bar just as the Liroans close in
-				''')	 
+			''')	 
 			return 'ship'
 
 		elif action == '3' or action == 'tell a joke':
@@ -57,7 +56,7 @@ class Bar(object):
 				Good move! You learned a bit Liroans while on the way to the planet. You tell
 				the only Liroan joke you know. They think you are hilarious and invite you
 				to play a game of cards
-				''')
+			''')
 			return 'cardgame'
 
 
@@ -72,7 +71,7 @@ class CardGame(object):
 			1.	yell 'cheaters!'
 			2. 	grab money and run
 			3. 	draw your gun
-			''')
+		''')
 
 		action = input("> ")
 
@@ -81,7 +80,7 @@ class CardGame(object):
 				The Liroans become very angry. Although the know they are in fact cheaters
 				no has the right to call them on it. Especially not the ones losing because of it.
 				The Liroans stand up and then they...
-				''')
+			''')
 			return('death')
 
 		elif action == '2' or action =='grab money and run':
@@ -95,18 +94,18 @@ class CardGame(object):
 			print('''
 				You shoot that Liroans will the entire crew, including you, escape out the back door.
 				Your ship, which received your distress signal earlier, is waiting for you. 
-					''')
+			''')
 			return('ship')
 
-
+# This class contains functions/methods for the Ship scene
 class Ship(object):
 	def enter(self):
 		print('''
-			Back on the ship you  the Liroans are on your tail. You must escape them, what you do you?
+			You back on the ship, but the Liroans are on your tail. You must escape them, what you do you?
 			1.	Open fire
 			2. 	Warp drive
 			3. 	Cloak		
-			''')
+		''')
 		action = input("> ")
 
 		if action == '1' or action == 'open fire':
